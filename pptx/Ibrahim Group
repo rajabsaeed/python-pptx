@@ -1,0 +1,30 @@
+from pptx import Presentation
+
+# Create a presentation object
+prs = Presentation()
+
+# Slide 1: Introduction
+slide_1 = prs.slides.add_slide(prs.slide_layouts[0])
+title_1 = slide_1.shapes.title
+title_1.text = "Introduction"
+content_1 = slide_1.placeholders[1]
+content_1.text = "Ibrahim Group, established in [year], is a leading conglomerate headquartered in Faisalabad, Pakistan. Our unwavering commitment to excellence and innovation has propelled us to the forefront of various industries."
+
+# Slide 2: Business Divisions
+slide_2 = prs.slides.add_slide(prs.slide_layouts[0])
+title_2 = slide_2.shapes.title
+title_2.text = "Business Divisions"
+content_2 = slide_2.placeholders[1]
+content_2.text = "- Textiles: Ibrahim Group boasts state-of-the-art textile facilities, encompassing the entire production process from fiber to finished goods, catering to both domestic and international markets.\n- Agriculture: With vast agricultural holdings and modern farming techniques, Ibrahim Group is a key player in ensuring food security and promoting sustainable agriculture practices.\n- Manufacturing: Our diversified manufacturing portfolio spans across sectors such as plastics, chemicals, and consumer goods, delivering high-quality products to meet evolving market demands.\n- Real Estate: Ibrahim Group's real estate arm engages in strategic investments and development projects, contributing to urban infrastructure and economic growth."
+
+# Slide 3: Key Achievements
+slide_3 = prs.slides.add_slide(prs.slide_layouts[0])
+title_3 = slide_3.shapes.title
+title_3.text = "Key Achievements"
+content_3 = slide_3.placeholders[1]
+content_3.text = "- Ibrahim Group holds a dominant market position in key sectors, driven by our relentless pursuit of excellence and customer satisfaction.\n- Our contributions to the national economy have been recognized through prestigious awards and accolades, underscoring our role as a driving force for economic development."
+
+# Repeat the process for the remaining points (CSR, Global Presence, Financial Performance, Future Outlook, Conclusion)
+
+# Save the presentation
+prs.save("Ibrahim_Group_Presentation.pptx")
